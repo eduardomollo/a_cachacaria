@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4970C205-0154-415A-8876-AE053C38C3C3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>A Cachacaria</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C466BB9BFD748324C9F057CD14AF56A7DAA5AD8A</key>
+		<string>https://github.com/eduardomollo/a_cachacaria.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>A Cachacaria.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C466BB9BFD748324C9F057CD14AF56A7DAA5AD8A</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/eduardomollo/a_cachacaria.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C466BB9BFD748324C9F057CD14AF56A7DAA5AD8A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C466BB9BFD748324C9F057CD14AF56A7DAA5AD8A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>A%20Cachacaria</string>
+		</dict>
+	</array>
+</dict>
+</plist>

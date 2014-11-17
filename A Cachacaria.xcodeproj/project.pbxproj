@@ -17,6 +17,8 @@
 		8433822319971C5300A3D16E /* Chat_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 8433822219971C5300A3D16E /* Chat_user.png */; };
 		8433822519971C5C00A3D16E /* Chat_user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8433822419971C5C00A3D16E /* Chat_user@2x.png */; };
 		843B0BBD1996A332001A1B57 /* CMChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B0BBC1996A332001A1B57 /* CMChatRoomViewController.m */; };
+		8444620F1A1A7E7000EE88E2 /* CMChatLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444620E1A1A7E7000EE88E2 /* CMChatLoginViewController.m */; };
+		844462121A1A834E00EE88E2 /* CMProgramacaoZoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844462111A1A834E00EE88E2 /* CMProgramacaoZoomViewController.m */; };
 		8465FA3219990B6300B0001E /* CMChatsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8465FA3119990B6300B0001E /* CMChatsTableViewController.m */; };
 		8482853E19986E0100CB2B75 /* CMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8482853D19986E0100CB2B75 /* CMLoginViewController.m */; };
 		848DEC80199BF5C2007B7C74 /* CM2ChatsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848DEC7F199BF5C2007B7C74 /* CM2ChatsTableViewController.m */; };
@@ -77,6 +79,10 @@
 		843AD450199C0517001C801D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		843B0BBB1996A332001A1B57 /* CMChatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMChatRoomViewController.h; sourceTree = "<group>"; };
 		843B0BBC1996A332001A1B57 /* CMChatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMChatRoomViewController.m; sourceTree = "<group>"; };
+		8444620D1A1A7E7000EE88E2 /* CMChatLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMChatLoginViewController.h; sourceTree = "<group>"; };
+		8444620E1A1A7E7000EE88E2 /* CMChatLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMChatLoginViewController.m; sourceTree = "<group>"; };
+		844462101A1A834E00EE88E2 /* CMProgramacaoZoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMProgramacaoZoomViewController.h; sourceTree = "<group>"; };
+		844462111A1A834E00EE88E2 /* CMProgramacaoZoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMProgramacaoZoomViewController.m; sourceTree = "<group>"; };
 		8465FA3019990B6300B0001E /* CMChatsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMChatsTableViewController.h; sourceTree = "<group>"; };
 		8465FA3119990B6300B0001E /* CMChatsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMChatsTableViewController.m; sourceTree = "<group>"; };
 		8482853C19986E0100CB2B75 /* CMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMLoginViewController.h; sourceTree = "<group>"; };
@@ -159,6 +165,8 @@
 			children = (
 				8490DC47198FCE4900304B85 /* CMProgramacaoViewController.h */,
 				8490DC48198FCE4900304B85 /* CMProgramacaoViewController.m */,
+				844462101A1A834E00EE88E2 /* CMProgramacaoZoomViewController.h */,
+				844462111A1A834E00EE88E2 /* CMProgramacaoZoomViewController.m */,
 			);
 			name = Programacao;
 			sourceTree = "<group>";
@@ -166,6 +174,8 @@
 		843B0BB7199697E4001A1B57 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				8444620D1A1A7E7000EE88E2 /* CMChatLoginViewController.h */,
+				8444620E1A1A7E7000EE88E2 /* CMChatLoginViewController.m */,
 				843B0BBB1996A332001A1B57 /* CMChatRoomViewController.h */,
 				843B0BBC1996A332001A1B57 /* CMChatRoomViewController.m */,
 				848DEC7E199BF5C2007B7C74 /* CM2ChatsTableViewController.h */,
@@ -469,12 +479,14 @@
 				841B558F198FC7D8008DD748 /* CMConstant.m in Sources */,
 				8465FA3219990B6300B0001E /* CMChatsTableViewController.m in Sources */,
 				84FE9E6F199C602000844F48 /* MBProgressHUD.m in Sources */,
+				844462121A1A834E00EE88E2 /* CMProgramacaoZoomViewController.m in Sources */,
 				8482853E19986E0100CB2B75 /* CMLoginViewController.m in Sources */,
 				848DEC80199BF5C2007B7C74 /* CM2ChatsTableViewController.m in Sources */,
 				8490DC49198FCE4900304B85 /* CMProgramacaoViewController.m in Sources */,
 				841B5598198FCB63008DD748 /* CMHomeViewController.m in Sources */,
 				843B0BBD1996A332001A1B57 /* CMChatRoomViewController.m in Sources */,
 				84F7AED2198FBE5C00985C50 /* main.m in Sources */,
+				8444620F1A1A7E7000EE88E2 /* CMChatLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
