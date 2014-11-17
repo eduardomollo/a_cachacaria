@@ -7,43 +7,137 @@
 //
 
 #import "CMProgramacaoViewController.h"
+#define pi 3.1415
 
 @interface CMProgramacaoViewController ()
+
+@property (strong, nonatomic) NSMutableArray *banner;
 
 @end
 
 @implementation CMProgramacaoViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.programacaoImageView.hidden = YES;
+    
 }
 
-- (void)didReceiveMemoryWarning
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super viewWillAppear:YES];
+    
+    [self.activityIndicator startAnimating];
+    
+    PFQuery *queryForBanner = [PFQuery queryWithClassName:kCMBannerClassKey];
+
+    [queryForBanner findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            self.banner = [objects mutableCopy];
+            
+            PFObject *diaUm = self.banner[0];
+            PFObject *diaDois = self.banner[1];
+            
+            self.diaUmLabel.text = diaUm[@"date"];
+            self.diaDoisLabel.text = diaDois[@"date"];
+            
+            PFFile *diaUmFile = diaUm[@"banner"];
+            
+            PFFile *diaDoisFile = diaDois[@"banner"];
+            
+            if (diaUmFile != NULL) {
+                [diaUmFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                    if (!error) {
+                        UIImage *bannerImage = [UIImage imageWithData:data];
+                        self.diaUmSmallImageView.image = bannerImage;
+
+                    }
+                    [self.activityIndicator stopAnimating];
+                    
+                }];
+            }
+            else {
+                [self.activityIndicator stopAnimating];
+            }
+            
+            if (diaDoisFile != NULL) {
+                [diaDoisFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                    if (!error) {
+                        UIImage *bannerImage = [UIImage imageWithData:data];
+                        self.diaDoisSmallImageView.image = bannerImage;
+                    }
+                    [self.activityIndicator stopAnimating];
+                    
+                }];
+            }
+            else {
+                [self.activityIndicator stopAnimating];
+            }
+            
+        }
+    }];
+
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (IBAction)diaUmButtonPressed:(UIButton *)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+    if (self.programacaoImageView.isHidden) {
+        
+        PFObject *diaUm = self.banner[0];
+        
+        PFFile *bannerFile = diaUm[@"banner"];
+        
+        if (bannerFile != NULL) {
+            [bannerFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                if (!error) {
+                    UIImage *bannerImage = [UIImage imageWithData:data];
+                    self.programacaoImageView.image = bannerImage;
+                }
+                [self.activityIndicator stopAnimating];
+                
+            }];
+        }
+        else {
+            [self.activityIndicator stopAnimating];
+        }
 
+        self.programacaoImageView.hidden = NO;
+    }
+    else {
+        self.programacaoImageView.hidden = YES;
+    }
+}
+
+- (IBAction)diaDoisButtonPressed:(UIButton *)sender
+{
+    if (self.programacaoImageView.isHidden) {
+        
+        PFObject *diaDois = self.banner[1];
+        
+        PFFile *bannerFile = diaDois[@"rotatedBanner"];
+        
+        if (bannerFile != NULL) {
+            [bannerFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                if (!error) {
+                    UIImage *bannerImage = [UIImage imageWithData:data];
+                    self.programacaoImageView.image = bannerImage;
+                }
+                [self.activityIndicator stopAnimating];
+                
+            }];
+        }
+        else {
+            [self.activityIndicator stopAnimating];
+        }
+
+        self.programacaoImageView.hidden = NO;
+    }
+    else {
+        self.programacaoImageView.hidden = YES;
+    }
+}
 @end

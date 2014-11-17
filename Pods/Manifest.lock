@@ -1,0 +1,33 @@
+PODS:
+  - Bolts (1.1.2)
+  - Facebook-iOS-SDK (3.17.0):
+    - Bolts
+  - JSMessagesViewController (4.0.4):
+    - JSQSystemSoundPlayer
+  - JSQMessagesViewController (5.2.1):
+    - JSQSystemSoundPlayer
+  - JSQSystemSoundPlayer (1.5.2)
+  - KASlideShow (2.0.0)
+  - Mixpanel (2.4.1)
+  - Parse (1.2.20):
+    - Facebook-iOS-SDK (~> 3.11)
+
+DEPENDENCIES:
+  - JSMessagesViewController
+  - JSQMessagesViewController
+  - JSQSystemSoundPlayer
+  - KASlideShow
+  - Mixpanel
+  - Parse
+
+SPEC CHECKSUMS:
+  Bolts: 2635e8698a630774689441047f3465d78c48d485
+  Facebook-iOS-SDK: f20274d809f112ba540842e2b6cbe50128d51b7b
+  JSMessagesViewController: 1083fdb9043e652a86b29bdfef526a9caef9f40e
+  JSQMessagesViewController: 23980f4af7898f94085072feaf4675c5221b38b4
+  JSQSystemSoundPlayer: c24914bc96ff5365b5d28b59d7ecffd60d1c5587
+  KASlideShow: 1c2398948f260cf6cd7ac27f1e2a62efaa238f0c
+  Mixpanel: a29ff32db93936dea24162f0dc4fecc4a8f17071
+  Parse: 28c0dc54f30201a369d29a2f76c09fa43b2add16
+
+COCOAPODS: 0.33.1

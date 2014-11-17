@@ -27,6 +27,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    PFLogInViewController *logInController = [[PFLogInViewController alloc] init];
+    logInController.delegate = self;
+    [self presentModalViewController:logInController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

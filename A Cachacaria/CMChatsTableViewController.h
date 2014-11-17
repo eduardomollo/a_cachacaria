@@ -7,7 +7,9 @@
 //
 
 #import <Parse/Parse.h>
+#import "CMChatRoomViewController.h"
 
 @interface CMChatsTableViewController : PFQueryTableViewController
+
 
 @end

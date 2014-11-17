@@ -10,4 +10,17 @@
 
 @interface CMProgramacaoViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
+@property (strong, nonatomic) IBOutlet UILabel *diaUmLabel;
+@property (strong, nonatomic) IBOutlet UILabel *diaDoisLabel;
+
+@property (strong, nonatomic) IBOutlet UIImageView *diaUmSmallImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *diaDoisSmallImageView;
+
+@property (strong, nonatomic) IBOutlet UIImageView *programacaoImageView;
+
+- (IBAction)diaUmButtonPressed:(UIButton *)sender;
+- (IBAction)diaDoisButtonPressed:(UIButton *)sender;
+
 @end
