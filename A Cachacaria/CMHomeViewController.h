@@ -1,5 +1,5 @@
 //
-//  CMViewController.h
+//  CMChatLoginViewController.h
 //  A Cachacaria
 //
 //  Created by Eduardo Mollo on 8/4/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CMViewController : UIViewController
+@interface CMChatLoginViewController : UIViewController
 
 @end

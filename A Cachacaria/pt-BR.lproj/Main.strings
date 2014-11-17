@@ -1,0 +1,15 @@
+
+/* Class = "IBUILabel"; text = "Dia 1"; ObjectID = "9Ye-zL-jWp"; */
+"9Ye-zL-jWp.text" = "Dia 1";
+
+/* Class = "IBUITextView"; text = "Olá, seja bem vindo ao App da Cachaçaria Mococa"; ObjectID = "OZU-oz-zS3"; */
+"OZU-oz-zS3.text" = "Olá, seja bem vindo ao App da Cachaçaria Mococa";
+
+/* Class = "IBUIButton"; normalTitle = "Entrar com o google"; ObjectID = "V2j-EW-AbQ"; */
+"V2j-EW-AbQ.normalTitle" = "Entrar com o google";
+
+/* Class = "IBUIButton"; normalTitle = "Entrar com o facebook"; ObjectID = "XX7-fj-6bX"; */
+"XX7-fj-6bX.normalTitle" = "Entrar com o facebook";
+
+/* Class = "IBUILabel"; text = "Dia 2"; ObjectID = "vaF-N8-KiI"; */
+"vaF-N8-KiI.text" = "Dia 2";
