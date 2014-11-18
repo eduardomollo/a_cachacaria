@@ -109,12 +109,8 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="cHX-MW-ShH">
                                 <rect key="frame" x="150" y="274" width="20" height="20"/>
                             </activityIndicatorView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZEL-81-pkV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZEL-81-pkV">
                                 <rect key="frame" x="0.0" y="80" width="320" height="439"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="439" id="Lst-zO-Mdv"/>
-                                    <constraint firstAttribute="width" constant="320" id="SXK-Bb-Nyj"/>
-                                </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DNr-IO-0tx">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
@@ -130,8 +126,11 @@
                         <constraints>
                             <constraint firstItem="ZEL-81-pkV" firstAttribute="top" secondItem="Bn2-9t-iN9" secondAttribute="bottom" constant="60" id="06A-LD-Wz2"/>
                             <constraint firstItem="gwe-Cx-Cf4" firstAttribute="leading" secondItem="Uww-5z-KF8" secondAttribute="leading" id="3V9-Go-eO4"/>
+                            <constraint firstAttribute="centerX" secondItem="ZEL-81-pkV" secondAttribute="centerX" id="GR1-yq-yrv"/>
                             <constraint firstItem="qzt-Mu-Zhh" firstAttribute="top" secondItem="ZEL-81-pkV" secondAttribute="bottom" id="I6l-Sh-hBU"/>
                             <constraint firstAttribute="trailing" secondItem="gwe-Cx-Cf4" secondAttribute="trailing" id="KmN-xp-eRK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZEL-81-pkV" secondAttribute="trailing" constant="-16" id="Rba-RW-Dep"/>
+                            <constraint firstItem="ZEL-81-pkV" firstAttribute="leading" secondItem="Uww-5z-KF8" secondAttribute="leadingMargin" constant="-16" id="nh1-c1-6lZ"/>
                             <constraint firstItem="gwe-Cx-Cf4" firstAttribute="top" secondItem="Bn2-9t-iN9" secondAttribute="bottom" constant="60" id="tdY-ry-QI0"/>
                         </constraints>
                     </view>
@@ -151,24 +150,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFt-xF-pMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-94" y="-199"/>
-        </scene>
-        <!--Programacao Zoom View Controller-->
-        <scene sceneID="TzW-ks-Fk4">
-            <objects>
-                <viewController id="ibu-Sg-bZ0" customClass="CMProgramacaoZoomViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="l8U-qH-DJS"/>
-                        <viewControllerLayoutGuide type="bottom" id="9y6-tO-kwu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qv8-gB-Czj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xkd-2r-PxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="273" y="-199"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aEu-rB-OW0">

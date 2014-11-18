@@ -21,7 +21,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+   // [self.programacaoImageView setTransform:CGAffineTransformRotate(self.programacaoImageView.transform, M_PI/2)];
     self.programacaoImageView.hidden = YES;
     
 }
@@ -89,7 +89,7 @@
         
         PFObject *diaUm = self.banner[0];
         
-        PFFile *bannerFile = diaUm[@"banner"];
+        PFFile *bannerFile = diaUm[@"bannerRotated"];
         
         if (bannerFile != NULL) {
             [bannerFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
@@ -110,6 +110,8 @@
     else {
         self.programacaoImageView.hidden = YES;
     }
+    
+ //   [self performSegueWithIdentifier:@"banner1toZoom" sender:@1];
 }
 
 - (IBAction)diaDoisButtonPressed:(UIButton *)sender
@@ -118,7 +120,7 @@
         
         PFObject *diaDois = self.banner[1];
         
-        PFFile *bannerFile = diaDois[@"rotatedBanner"];
+        PFFile *bannerFile = diaDois[@"bannerRotated"];
         
         if (bannerFile != NULL) {
             [bannerFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
@@ -139,5 +141,20 @@
     else {
         self.programacaoImageView.hidden = YES;
     }
+    
+ //   [self performSegueWithIdentifier:@"banner1toZoom" sender:@2];
 }
+
+
+ #pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    CMProgramacaoZoomViewController *banner1VC = segue.destinationViewController;
+    banner1VC.banner = self.programacaoImageView.image;
+//    [banner1VC.banner.]
+   // [banner1VC viewWillAppear:YES];
+}
+
+
 @end
