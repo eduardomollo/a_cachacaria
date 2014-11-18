@@ -21,7 +21,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-   // [self.programacaoImageView setTransform:CGAffineTransformRotate(self.programacaoImageView.transform, M_PI/2)];
     self.programacaoImageView.hidden = YES;
     
 }
@@ -33,6 +32,8 @@
     [self.activityIndicator startAnimating];
     
     PFQuery *queryForBanner = [PFQuery queryWithClassName:kCMBannerClassKey];
+    
+    [queryForBanner orderByAscending:@"index"];
 
     [queryForBanner findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
@@ -143,17 +144,6 @@
     }
     
  //   [self performSegueWithIdentifier:@"banner1toZoom" sender:@2];
-}
-
-
- #pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    CMProgramacaoZoomViewController *banner1VC = segue.destinationViewController;
-    banner1VC.banner = self.programacaoImageView.image;
-//    [banner1VC.banner.]
-   // [banner1VC viewWillAppear:YES];
 }
 
 
